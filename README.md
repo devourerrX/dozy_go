@@ -1,7 +1,8 @@
 # 🚀 DozyGo – Nap Smart, Arrive Right!
-
-![Map Screen](assets/images/map.jpg)
-![Location Screen](assets/images/location.jpg)
+## 📸 Screenshots
+| Map View | Location Search |
+|----------|-----------------|
+| ![Map](assets/images/map.jpg) | ![Location](assets/images/location.jpg) |
 
 Hey there, sleepy traveler! 😴✨ Welcome to **DozyGo**, the Flutter-powered location alarm that lets you **doze off peacefully** while we keep an eye on your destination. No more missing your stop or awkwardly waking up at the end of the line! 🚌🚆
 
