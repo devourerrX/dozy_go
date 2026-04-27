@@ -1,0 +1,178 @@
+class _MapPageState extends State<MapPage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+ => we do this to return the cross sign on screen
+
+
+
+
+
+ 🧠 What is ?? ?
+
+?? means:
+
+👉 “If left side is NOT null → use it”
+👉 “If left side is null → use right side”
+
+🍕 Real-life example
+String? name;
+
+String displayName = name ?? "Guest";
+What happens:
+If name = "Tanmay" → result = "Tanmay" ✅
+If name = null → result = "Guest" 👤
+
+
+
+
+!await = it checks if it is true or false, or false or true.
+
+
+
+
+Always use import dart:convert while using json
+
+
+
+
+👉 MainActivity is the entry point of your Android app
+
+
+
+🧠 Why this is needed
+
+👉 You are calling:
+
+http://router.project-osrm.org
+
+
+❌ Android blocks http by default
+✅ This setting allows it
+
+
+
+
+
+Errors i face : 🧠 📌 Your Debugging Log (DozyGo Project)
+1. ❌ Device not showing in VS Code
+
+👉 Cause: ADB / USB debugging / connection issue
+👉 Fix: Enabled USB debugging, restarted ADB, checked adb devices
+
+2. ❌ Misleading AVD error
+No suitable Android AVD system images are available
+
+
+👉 Cause: Emulator error shown even when using real device
+👉 Fix: Ignored it (not relevant)
+
+3. 💥 App crash on launch
+ClassNotFoundException: MainActivity
+
+
+👉 Cause: Package name ≠ folder structure
+👉 Fix: Matched:
+
+package ↔ folder ↔ manifest
+
+4. ❌ Deleted MainActivity accidentally 😅
+
+👉 Cause: Manual folder changes
+👉 Fix: Recreated MainActivity.kt
+
+5. ❌ Didn’t know how to paste code
+
+👉 Cause: File handling confusion
+👉 Fix: Learned VS Code file editing basics
+
+6. ❌ Infinite loading (spinner stuck)
+
+👉 Cause: isLoading never set to false
+👉 Fix: Added proper setState + error handling
+
+7. ❌ Location API blocking app
+
+👉 Cause: getLocation() hanging
+👉 Fix: Added:
+
+timeout()
+try-catch
+
+8. ❌ Missing permissions
+
+👉 Cause: No location / internet permission
+👉 Fix: Added in AndroidManifest.xml
+
+9. ❌ HTTP blocked by Android
+
+👉 Cause: Using http:// (OSRM API)
+👉 Fix:
+
+android:usesCleartextTraffic="true"
+
+10. ❌ Nominatim search not working
+
+👉 Cause: Missing headers
+👉 Fix:
+
+'User-Agent': 'dozy_go_app'
+
+11. ❌ API debugging not visible
+
+👉 Cause: No logs
+👉 Fix: Added:
+
+print(response.body)
+
+12. ❌ Function logic broken
+
+👉 Cause: Listener placed outside function
+👉 Fix: Moved inside _initializeLocation()
+
+13. ❌ Map not loading again
+
+👉 Cause: Async flow broken
+👉 Fix: Proper function structure + error handling
+
+14. ❌ Search worked but map not moving
+
+👉 Cause: MapController not updating UI
+👉 Fix: Used:
+
+_mapController.move()
+
+15. ❌ Polyline not showing
+
+👉 Cause: Route API failing silently
+👉 Fix: Added logs + validated response
+
+16. ❌ Over-strict UI condition
+
+👉 Cause:
+
+_currentLocation != null && _destination != null
+
+
+👉 Fix:
+
+_route.isNotEmpty
+
+17. ❌ Current location not updating properly
+
+👉 Cause: Null / outdated coordinates
+👉 Fix: Ensured real-time updates via listener
+
+18. ✅ FINAL ROOT ISSUE
+
+👉 Cause: Wrong / missing coordinates
+👉 Fix: Proper data flow → everything worked
+
+
+
+
+
+Material page route = defines new screen
+buider = builds the screen
